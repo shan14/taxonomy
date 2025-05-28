@@ -1,0 +1,125 @@
+created_by: shan14
+version: 3
+domain: healthcare
+document_outline: Document provides details of file layout for pharmacy
+seed_examples:
+  - context: >-
+      The "Carrier Code" or "RxGRP ID" is a unique numeric or alphanumeric
+      identifier printed on the member's ID card. It is used by healthcare
+      payers and pharmacy benefit managers (PBMs) to route eligibility and
+      claims data accurately. Often specific to an employer group, this ID
+      ensures the correct benefits are applied during prescription and
+      healthcare service adjudication.
+
+      This term is often used interchangeably with "Group ID" or "RxGRP" in the
+      context of pharmacy data.
+    questions_and_answers:
+      - question: What is the purpose of the RxGRP ID?
+        answer: >-
+          The RxGRP ID identifies the specific insurance group or employer plan
+          and ensures that the correct plan rules, copays, and coverage details
+          are applied to a prescription claim.
+      - question: Where can you find RxGRP?
+        answer: >-
+          The RxGRP (or Group ID) is a code found on your insurance or Medicare
+          Part D card
+      - question: Why is RxGRP important?
+        answer: >-
+          The RxGRP ID ensures that the correct plan rules, copays, and coverage
+          details are applied to your prescription.
+  - context: >-
+      his field identifies the specific insurance group under a client’s benefit
+      structure—such as Active, Retiree, or COBRA participants. It is often used
+      to segment covered populations and apply specific plan rules. The value
+      typically aligns with the structure and suffixing guidelines set by payers
+      like Anthem.
+
+      Group Number, often labeled as "GRP" or "RxGRP" on insurance or pharmacy
+      benefit cards, is a unique identifier assigned by a health insurance
+      company to specify a member’s group health plan.
+    questions_and_answers:
+      - question: What is Group Number?
+        answer: >-
+          It is a unique identifier assigned by a health insurance company to
+          specify a member’s group health plan.
+      - question: What does the Group Number represent?
+        answer: >-
+          This number typically represents the employer, association, or other
+          group that sponsors the insurance plan.
+      - question: Does all insurance card display Group Number?
+        answer: >-
+          Not all insurance cards will display a Group Number, especially for
+          individual plans or certain government programs.
+  - context: >-
+      "Group Name" is a human-readable label for the group number. It might
+      identify departments or roles within an organization and helps
+      administrative users understand the plan without referencing codes.
+
+      Group Name refers to the name of the organization, employer, or
+      association that sponsors or provides the insurance plan. It is typically
+      listed on health or pharmacy insurance cards alongside the Group Number
+      (or RxGRP), which is the unique identifier for that group.
+    questions_and_answers:
+      - question: What does Group Name refer to?
+        answer: >-
+          Group Name refers to the name of the organization, employer, or
+          association that sponsors or provides the insurance plan.
+      - question: What does Group Name help in?
+        answer: >-
+          The Group Name helps identify the specific employer or group that is
+          offering the coverage, such as a company or union.
+      - question: Where can you find it?
+        answer: >-
+          It is commonly found on the insurance card and is used by pharmacies
+          and healthcare providers to confirm the correct insurance plan for
+          billing and claims processing.
+  - context: >-
+      This is a unique value assigned to an insurance subscriber or member. It
+      includes a prefix and is printed on the insurance ID card. This field is
+      vital for identifying members across healthcare and pharmacy transactions
+      and helps maintain a link between the member and their benefit history.
+
+      Patient Number or Cardholder ID is a unique identifier assigned to an
+      individual covered by a health or pharmacy insurance plan. This number is
+      essential for verifying eligibility, processing claims.
+    questions_and_answers:
+      - question: What is a Patient Number?
+        answer: This is a unique value assigned to an insurance subscriber or member.
+      - question: How do pharmacies use this?
+        answer: >-
+          Pharmacies and benefit administrators use this number to route and
+          adjudicate claims accurately.
+      - question: What is the Cardholder ID for dependents?
+        answer: >-
+          For dependents (such as spouses or children), the Cardholder ID may be
+          the same as the primary policyholder’s number, with an additional
+          identifier or suffix.
+  - context: >-
+      A short code (typically 2 characters) that differentiates individuals
+      under the same Patient Number. For example, a family may share a patient
+      number, with each member having a distinct Person Code. If not used, this
+      field is space-filled.
+
+      Person Code is a numeric or alphanumeric value used to identify the
+      specific individual (such as a dependent or spouse) covered under a health
+      insurance policy, especially when multiple people share the same
+      Cardholder ID or Member ID.
+    questions_and_answers:
+      - question: What is a Person Code?
+        answer: >-
+          A short code (typically 2 characters) that differentiates individuals
+          under the same Patient Number.
+      - question: Why is this essential?
+        answer: >-
+          This code is essential for claims processing, ensuring that benefits,
+          eligibility, and claims are correctly matched to the right individual
+          within a family or group plan.
+      - question: What is it labeled as?
+        answer: >-
+          You may see the Person Code on insurance cards or in electronic claims
+          data, often in a field labeled "Person Code" or "Dependent Code".
+document:
+  repo: https://github.com/shan14/healthcare
+  commit: 9fe364e
+  patterns:
+    - comprehensive_expanded_layout_description.md

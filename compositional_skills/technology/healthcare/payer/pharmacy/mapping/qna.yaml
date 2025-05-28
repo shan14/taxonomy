@@ -1,0 +1,61 @@
+created_by: shan14
+version: 3
+task_description: >-
+  Given a source column name, data type, and description,generate the most
+  likely target column and transformation logic
+seed_examples:
+  - context: |-
+      | Source Column        | Source Table         | Target Column        |
+          Target Table         | Description         |
+
+          |----------------------|----------------------|----------------------|----------------------|---------------------|
+
+          | PROCESS DATE OR PAID DATE | Rightway Pharmacy Claims | ADJUDICATION DATE | LZ_CLM_HDR
+          | Processed date on claim, also referred to as paid date. |
+    question: What is the mapping for  PLAN NAME from Rightway Pharmacy Claims?
+    answer: 'It maps to `ACTIVATING PLAN CODE` in `LZ_CLM_HDR`. Description: Plan Name'
+  - context: |-
+      | Source Column        | Source Table         | Target Column        |
+          Target Table         | Description         |
+
+          |----------------------|----------------------|----------------------|----------------------|---------------------|
+
+          | PROCESS DATE OR PAID DATE | Rightway Pharmacy Claims | ADJUDICATION DATE | LZ_CLM_HDR
+          | Processed date on claim, also referred to as paid date. |
+    question: |-
+      What is the mapping for  PROCESS DATE OR PAID DATE  from Rightway Pharmacy
+          Claims?
+    answer: 'It maps to ACTIVATING PLAN CODE  in LZ_CLM_HDR. Description: Plan Name'
+  - context: |-
+      | Source Column        | Source Table         | Target Column        |
+          Target Table         | Description         |
+
+          |----------------------|----------------------|----------------------|----------------------|---------------------|
+
+          | DATE OF BIRTH | Rightway Pharmacy Claims | ADMIT DATE | LZ_CLM_HDR | Date of
+          Birth |
+    question: |-
+      What is the mapping for PROCESS DATE OR PAID DATE from Rightway Pharmacy
+          Claims?
+    answer: |-
+      It maps to ADJUDICATION DATE in LZ_CLM_HDR. Description: Processed
+          date on claim, also referred to as paid date.
+  - context: |-
+      | Source Column        | Source Table         | Target Column        |
+          Target Table         | Description         |
+
+          |----------------------|----------------------|----------------------|----------------------|---------------------|
+
+          | PROCESS DATE OR PAID DATE | Rightway Pharmacy Claims | CLAIM ACTION DATE | LZ_CLM_HDR
+          | Processed date on claim, also referred to as paid date. |
+    question: >-
+      What is the mapping for PROCESS DATE OR PAID DATE from Rightway Pharmacy
+      Claims?
+    answer: >-
+      It maps to CLAIM ACTION DATE in LZ_CLM_HDR. Description: Processed date on
+      claim, also referred to as paid date.
+  - context: "| Source Column        | Source Table         | Target Column        |\n    Target Table         | Description         |\n\n    |----------------------|----------------------|----------------------|----------------------|---------------------|\n\n    | PRESCRIPTION FILL CODE | Rightway Pharmacy Claims | FILLED REFILLS NUMBER | LZ_CLM_HDR\n    | The code indicating whether the prescription is an original or a refill.\_ 00 is original 01 is the first fill etc. |"
+    question: >-
+      What is the mapping for PRESCRIPTION FILL CODE from Rightway Pharmacy
+      Claims?
+    answer: "It maps to FILLED REFILLS NUMBER in LZ_CLM_HDR. Description: The code indicating whether the prescription is an original or a refill.\_ 00 is original 01 is the first fill etc."
